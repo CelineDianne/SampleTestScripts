@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191016 18:30:07.013" generator="Robot 3.1.2 (Python 2.7.16 on win32)">
+<suite source="C:\Users\IT_Francis\Desktop\activity\Payment.robot" id="s1" name="Payment">
+<test id="s1-t1" name="Verify that Customer can login to the system">
+<kw name="Open Browser and go to login page">
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${delay}</arg>
+</arguments>
+<status status="PASS" endtime="20191016 18:30:09.434" starttime="20191016 18:30:09.434"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20191016 18:30:09.435" level="INFO">Opening browser 'chrome' to base url 'http://turftestenvforsimplevia.azurewebsites.net'</msg>
+<status status="PASS" endtime="20191016 18:30:52.036" starttime="20191016 18:30:09.434"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191016 18:30:57.156" starttime="20191016 18:30:52.036"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20191016 18:30:57.156" level="INFO">Clicking element '//*[@id="navbarSupportedContent"]/ul/li[4]'.</msg>
+<status status="PASS" endtime="20191016 18:30:59.267" starttime="20191016 18:30:57.156"></status>
+</kw>
+<status status="PASS" endtime="20191016 18:30:59.267" starttime="20191016 18:30:09.434"></status>
+</kw>
+<kw name="Input Customer Username">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20191016 18:30:59.268" level="INFO">Typing text 'RubyGooo1!' into text field '//*[@id="float-input-username"]'</msg>
+<status status="PASS" endtime="20191016 18:31:02.360" starttime="20191016 18:30:59.268"></status>
+</kw>
+<status status="PASS" endtime="20191016 18:31:02.360" starttime="20191016 18:30:59.267"></status>
+</kw>
+<kw name="Input Customer Password">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${password_field}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:02.361" level="INFO">Typing text 'RubyGooo1!' into text field '//*[@id="float-input-password"]'</msg>
+<status status="PASS" endtime="20191016 18:31:05.474" starttime="20191016 18:31:02.361"></status>
+</kw>
+<status status="PASS" endtime="20191016 18:31:05.474" starttime="20191016 18:31:02.360"></status>
+</kw>
+<kw name="Click Submit">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${login_submit_button}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:05.475" level="INFO">Clicking button '//button[@class='align-self-center']'.</msg>
+<status status="PASS" endtime="20191016 18:31:10.550" starttime="20191016 18:31:05.475"></status>
+</kw>
+<status status="PASS" endtime="20191016 18:31:10.550" starttime="20191016 18:31:05.475"></status>
+</kw>
+<kw name="Go To My Profile">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${my_profile_button}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:10.551" level="INFO">Clicking element '//*[@id="navbarSupportedContent"]/ul/li[1]/a'.</msg>
+<status status="PASS" endtime="20191016 18:31:12.839" starttime="20191016 18:31:10.551"></status>
+</kw>
+<status status="PASS" endtime="20191016 18:31:12.839" starttime="20191016 18:31:10.551"></status>
+</kw>
+<kw name="Go To my Reservations">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${my_reservation}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:12.840" level="INFO">Clicking element '//span[contains(text(),'MY RESERVATIONS')]'.</msg>
+<status status="PASS" endtime="20191016 18:31:14.928" starttime="20191016 18:31:12.840"></status>
+</kw>
+<status status="PASS" endtime="20191016 18:31:14.928" starttime="20191016 18:31:12.840"></status>
+</kw>
+<kw name="Update Mode of Payment">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${change_payment_method}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:14.929" level="INFO">Clicking element '//span[@class='ui-button-icon-left ui-clickable fa fa-pencil-alt']'.</msg>
+<status status="PASS" endtime="20191016 18:31:17.007" starttime="20191016 18:31:14.929"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${over_the_counter}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:17.007" level="INFO">Clicking element '//div[@class='row payment-body bg-white text-dark']//div[1]//p-radiobutton[1]//div[1]//div[2]//span[1]'.</msg>
+<status status="PASS" endtime="20191016 18:31:19.068" starttime="20191016 18:31:17.007"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${check_radiobutton}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:19.068" level="INFO">Clicking element '//div[@class='ui-dialog-content ui-widget-content']//div[2]//p-radiobutton[2]//div[1]//div[2]//span[1]'.</msg>
+<status status="PASS" endtime="20191016 18:31:21.116" starttime="20191016 18:31:19.068"></status>
+</kw>
+<status status="PASS" endtime="20191016 18:31:21.116" starttime="20191016 18:31:14.929"></status>
+</kw>
+<kw name="Input Remarks">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${remarks_textarea}</arg>
+<arg>${remarks}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:21.117" level="INFO">Typing text 'testing' into text field '//html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/textarea[1]'</msg>
+<status status="PASS" endtime="20191016 18:31:24.218" starttime="20191016 18:31:21.117"></status>
+</kw>
+<status status="PASS" endtime="20191016 18:31:24.218" starttime="20191016 18:31:21.117"></status>
+</kw>
+<kw name="Click Proceed">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${proceed_button}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:24.219" level="INFO">Clicking element '//span[contains(text(),'Proceed')]'.</msg>
+<status status="PASS" endtime="20191016 18:31:26.270" starttime="20191016 18:31:24.218"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${yes2_button}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:26.270" level="INFO">Clicking element '//span[@class='ui-button-icon-left ui-clickable pi pi-check']'.</msg>
+<status status="PASS" endtime="20191016 18:31:28.318" starttime="20191016 18:31:26.270"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets Selenium 2's default implicit wait in seconds and
+sets the implicit wait for all open browsers.</doc>
+<arguments>
+<arg>${delay2}</arg>
+</arguments>
+<status status="PASS" endtime="20191016 18:31:29.319" starttime="20191016 18:31:28.318"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>UPDATED</arg>
+</arguments>
+<status status="PASS" endtime="20191016 18:31:30.332" starttime="20191016 18:31:29.319"></status>
+</kw>
+<status status="PASS" endtime="20191016 18:31:30.332" starttime="20191016 18:31:24.218"></status>
+</kw>
+<kw name="Click Submit Button">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${logout_dropdown}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:30.333" level="INFO">Clicking element '//span[@class='ui-submenu-icon pi pi-fw pi-caret-down ng-star-inserted']'.</msg>
+<status status="PASS" endtime="20191016 18:31:32.385" starttime="20191016 18:31:30.333"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${logout_button}</arg>
+</arguments>
+<msg timestamp="20191016 18:31:32.385" level="INFO">Clicking element '//span[contains(text(),'LOGOUT')]'.</msg>
+<status status="PASS" endtime="20191016 18:31:34.452" starttime="20191016 18:31:32.385"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20191016 18:31:37.883" starttime="20191016 18:31:34.452"></status>
+</kw>
+<status status="PASS" endtime="20191016 18:31:37.883" starttime="20191016 18:31:30.333"></status>
+</kw>
+<doc>Login of the User</doc>
+<status status="PASS" endtime="20191016 18:31:37.884" critical="yes" starttime="20191016 18:30:09.433"></status>
+</test>
+<doc>Login and Book Test Script/Author: Celine Dianne/Date: 10.14.2019</doc>
+<status status="PASS" endtime="20191016 18:31:37.994" starttime="20191016 18:30:07.014"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Payment" pass="1">Payment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
