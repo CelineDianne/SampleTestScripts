@@ -1,0 +1,4 @@
+*** Settings ***
+Documentation    Sign Up Test Script
+Library    Selenium2Library
+Documentation    Author: Celine Dianne/10.14.2019
