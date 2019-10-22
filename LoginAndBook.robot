@@ -53,9 +53,9 @@ Verify that Customer can login to the system
     Click Submit button
 
 
-Verify that Customer can book and reserve to the sytem
-    # This is for booking slots
-    Click Calendar Submit Button
-    December Bookings
-    November Bookings
-    Add to Cart
+# Verify that Customer can book and reserve to the sytem
+#     # This is for booking slots
+#     Click Calendar Submit Button
+#     December Bookings
+#     November Bookings
+#     Add to Cart
