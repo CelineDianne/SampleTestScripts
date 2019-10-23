@@ -47,7 +47,7 @@ Click SignIn Button
     Click Element    ${Sign_button}
 
 Enter Email
-    [Arguments]    ${email}=deborah.duran@simplevia.com
+    [Arguments]    ${email}=deedev29@gmal.com
     Input Text    ${enterEmail_field}    ${email}
 
 Click Create Account
@@ -57,11 +57,11 @@ Click Mrs
     Click Element    ${Mrs_button}
 
 Enter First Name
-    [Arguments]    ${firstname}=Dev
+    [Arguments]    ${firstname}=James
     Input Text    ${FirstName_field}    ${firstname}
 
 Enter Last Name
-    [Arguments]    ${lastname}=Duran
+    [Arguments]    ${lastname}=Fernandez
     Input Text    ${LastName_field}    ${lastname}
 
 Enter Password
@@ -78,7 +78,7 @@ Click Days
     Click Element    ${checkbox_button}
 
 Enter Company
-    [Arguments]    ${company}=ABC Company
+    [Arguments]    ${company}=ABCD Company
     Input Text    ${company_field}    ${company}
 
 Enter Address
@@ -105,11 +105,11 @@ Input Additional
     Input Text    ${additional_field}    ${additional}
 
 Input Phone
-    [Arguments]    ${phone}=09263061002
+    [Arguments]    ${phone}=09263061006
     Input Text    ${phone_field}    ${phone}
 
 Input Mobile
-    [Arguments]    ${mobilephone}=09263061004
+    [Arguments]    ${mobilephone}=09263061005
     Input Text    ${mobile_field}    ${mobilephone}
 
 
