@@ -11,8 +11,7 @@ ${delay}    1s
 ${Signup_Button}    //a[@class='login']
 ${Email_Field}    //input[@id='email']
 ${Password_Field}    //input[@id='passwd']
-${Submit_Button}    //a[@class='login']
-
+${Submit_Button}    //button[@id='SubmitLogin']
 
 
 
