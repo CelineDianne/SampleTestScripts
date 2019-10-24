@@ -5,6 +5,7 @@ Library    Selenium2Library
 ${url}    http://automationpractice.com/index.php
 ${browser}    chrome
 ${Signup_Button}    //a[@class='login']
+${delay}    2s
 ${Email_Field}    //input[@id='email']
 ${Password_Field}    //input[@id='passwd']
 ${Submit_Button}    //button[@id='SubmitLogin']
@@ -13,7 +14,7 @@ ${tshirts_button}    //*[@id="block_top_menu"]/ul/li[1]/ul/li[1]/ul/li[1]/a
 ${faded_button}    //a[@class='product_img_link']//img[@class='replace-2x img-responsive']
 ${addfaded_button}    //div//span[contains(text(),'Add to cart')]
 ${continue1_button}    //div//span[@class='continue btn btn-default button exclusive-medium']//span[1]
-${women1_button}     //a[@class='sf-with-ul'][contains(text(),'Women')]
+${women1_button}    //a[@class='sf-with-ul'][contains(text(),'Women')]
 ${blouse_button}    //*[@id="block_top_menu"]/ul/li[1]/ul/li[1]/ul/li[2]/a
 ${blousehov_button}    //a[@class='product_img_link']//img[@class='replace-2x img-responsive']
 ${addblouse_button}    //div//span[contains(text(),'Add to cart')]
@@ -28,19 +29,17 @@ ${eveningdress_button}    //*[@id="block_top_menu"]/ul/li[2]/ul/li[2]/a
 ${eveninghov_button}    //a[@class='product_img_link']//img[@class='replace-2x img-responsive']
 ${addevening_button}    //div//span[contains(text(),'Add to cart')]
 ${continue3_button}    //div//span[@class='continue btn btn-default button exclusive-medium']//span[1]
-${dresses2_button}    //*[@id="block_top_menu"]/ul/li[2]/a
-${summer_button}     //html[1]/body[1]/div[1]/div[1]/header[1]/div[3]/div[1]/div[1]/div[6]/ul[1]/li[2]/ul[1]/li[3]/a[1]
-${summerdress_button}    //*[@id="center_column"]/ul/li[3]/div/div[1]/div/a[1]/img
-${addsummer_button}    //span[contains(text(),'Add to cart')]
-${proceed_button}     //span[contains(text(),'Proceed to checkout')]
-${checkout_button}    //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]
-${delay}    2s
-${delay1}    10s
+
+${dress_button}    //*[@id="block_top_menu"]/ul/li[2]/a
+${summer_button}    //li[@class='sfHover']//a[contains(text(),'Summer Dresses')]
+${summer1_button}    //li[@class='ajax_block_product col-xs-12 col-sm-6 col-md-4 first-in-line last-line first-item-of-tablet-line first-item-of-mobile-line last-mobile-line']//img[@class='replace-2x img-responsive']
+${addsummer_button}    //li[@class='ajax_block_product col-xs-12 col-sm-6 col-md-4 first-in-line last-line first-item-of-tablet-line first-item-of-mobile-line last-mobile-line']//span[contains(text(),'Add to cart')]
+${proceed_button}    //span[contains(text(),'Proceed to checkout')]
+
 
 *** Keywords ***
 Opening Browser and go to page
     Set Selenium Speed    ${delay}
-    Set Selenium Implicit Wait    ${delay1}
     Open Browser    ${url}    ${browser}
     Maximize Browser Window
 
@@ -82,11 +81,12 @@ Click Dresses
     Mouse Over    ${eveninghov_button}
     Click Element    ${addevening_button}
     Click Element    ${continue3_button}
-    Mouse Over    ${summer_button}
-    Click Element    ${summerdress_button}
+    Mouse Over    ${dress_button}
+    Click Element    ${summer_button}
+    Mouse Over    ${summer1_button}
     Click Element    ${addsummer_button}
     Click Element    ${proceed_button}
-    Click Element    ${checkout_button}
+
 
 
 
