@@ -34,6 +34,7 @@ ${Agree}    //input[@id='cgv']
 ${Proceed4}    //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]
 ${Cheque}    //a[@class='cheque']
 ${Confirmation}    //span[contains(text(),'I confirm my order')]
+${Signout}    //a[@class='logout']
 ${delay1}    5s
 
 *** Keywords ***
@@ -130,6 +131,12 @@ Cheque
 Confirmation
     Click Element    ${Confirmation}
 
+Signout
+    Click Element    ${Signout}
+
+Close
+    Close Browser
+
 *** Test Cases ***
 Verify that customer can go to the website
     Opening Browser and go to page
@@ -158,3 +165,5 @@ Verify that customer can go to the website
     Proceed4
     Cheque
     Confirmation
+    Signout
+    Close
