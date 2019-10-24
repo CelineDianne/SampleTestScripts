@@ -1,6 +1,8 @@
 *** Settings ***
 Library    Selenium2Library
 
+
+
 *** Variables ***
 ${url}    http://automationpractice.com/index.php
 ${browser}    chrome
@@ -33,8 +35,18 @@ ${continue3_button}    //div//span[@class='continue btn btn-default button exclu
 ${dress_button}    //*[@id="block_top_menu"]/ul/li[2]/a
 ${summer_button}    //li[@class='sfHover']//a[contains(text(),'Summer Dresses')]
 ${summer1_button}    //li[@class='ajax_block_product col-xs-12 col-sm-6 col-md-4 first-in-line last-line first-item-of-tablet-line first-item-of-mobile-line last-mobile-line']//img[@class='replace-2x img-responsive']
-${addsummer_button}    //li[@class='ajax_block_product col-xs-12 col-sm-6 col-md-4 first-in-line last-line first-item-of-tablet-line first-item-of-mobile-line last-mobile-line']//span[contains(text(),'Add to cart')]
+${addsummer_button}    //*[@id="center_column"]/ul/li[1]/div/div[2]/div[2]/a[1]/span
 ${proceed_button}    //span[contains(text(),'Proceed to checkout')]
+${pcheckout_button}     //a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]
+
+${comment_field}    //textarea[@name='message']
+${proc_button}    //button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]
+${checkbox_button}    //input[@id='cgv']
+${proc1_button}    //button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]
+${pay_button}    //*[@id="HOOK_PAYMENT"]/div[2]/div/p/a
+${confirm_button}    //span[contains(text(),'I confirm my order')]
+${logout_button}    //a[@class='logout']
+
 
 
 *** Keywords ***
@@ -86,9 +98,22 @@ Click Dresses
     Mouse Over    ${summer1_button}
     Click Element    ${addsummer_button}
     Click Element    ${proceed_button}
+    Click Element    ${pcheckout_button}
 
+Input Address
+    [Arguments]    ${comment}=Ohhhhh Happy Day!
+    Input Text    ${comment_field}    ${comment}
 
+Click proceed
+    Click Element    ${proc_button}
+    Click Element    ${checkbox_button}
+    Click Element    ${proc1_button}
+    Click Element    ${pay_button}
+    Click Element    ${confirm_button}
+    Click Element    ${logout_button}
 
+Close
+    Close Browser
 
 *** Test Cases ***
 Verify that customer can go to the website
@@ -99,3 +124,9 @@ Verify that customer can go to the website
     Submit
     Click women
     Click Dresses
+    Input Address
+    Click proceed
+    Close
+
+
+
