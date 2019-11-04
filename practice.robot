@@ -7,7 +7,7 @@ Library    Selenium2Library
 
 *** Variable ***
 ${url}    http://automationpractice.com/index.php
-${browser}    chrome
+${browser}    firefox
 ${Sign_button}    //a[@class='login']
 ${enterEmail_field}    //*[@id="email_create"]
 ${createAccount_button}    //form[@id='create-account_form']//span[1]
@@ -47,7 +47,7 @@ Click SignIn Button
     Click Element    ${Sign_button}
 
 Enter Email
-    [Arguments]    ${email}=deedev29@gmal.com
+    [Arguments]    ${email}=mcelinedianne00@gmail.com
     Input Text    ${enterEmail_field}    ${email}
 
 Click Create Account
@@ -57,11 +57,11 @@ Click Mrs
     Click Element    ${Mrs_button}
 
 Enter First Name
-    [Arguments]    ${firstname}=James
+    [Arguments]    ${firstname}=Selina
     Input Text    ${FirstName_field}    ${firstname}
 
 Enter Last Name
-    [Arguments]    ${lastname}=Fernandez
+    [Arguments]    ${lastname}=Jackson
     Input Text    ${LastName_field}    ${lastname}
 
 Enter Password
@@ -119,6 +119,7 @@ Input Alias
 
 Click Register
     Click Element    ${register_button}
+    Close Browser
 
 
 *** Test Cases ***
